@@ -1,24 +1,24 @@
 {
   "name": "legiondrive-server",
   "version": "1.0.0",
-  "type": "module",  
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",  
-    "dev": "nodemon index.js", 
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
-    "express": "^4.18.2",  
+    "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.15.0",
-    "multer": "^2.0.0",
-    "stripe": "^18.1.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
+    "multer": "^2.0.0"
   }
 }
