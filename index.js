@@ -2,13 +2,12 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
+import mongoose from 'mongoose';
 import connectDB from './config/db.js'
 import authRoutes from './routes/auth.routes.js'
 import userRoutes from './routes/user.routes.js'
 import fileRoutes from './routes/file.routes.js'
 import paymentRoutes from './routes/payment.routes.js'
-
-
 
 
 dotenv.config()
