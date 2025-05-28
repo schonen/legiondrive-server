@@ -5,5 +5,9 @@ const router = express.Router()
 
 router.post('/register', register)
 router.post('/login', login)
+router.get('/', (req, res) => {
+  res.send('🛡️ Bienvenue sur /api/auth (authentification)');
+});
+
 
 export default router

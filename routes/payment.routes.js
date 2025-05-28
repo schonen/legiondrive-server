@@ -1,11 +1,17 @@
 import express from 'express'
 import auth from '../middlewares/auth.js'
-import { subscribe, getMyPayments } from '../controllers/payment.controller.js'
-
+import { createPayment, getMyPayments } from '../controllers/payment.controller.js'
 
 const router = express.Router()
 
-router.post('/subscribe', auth, subscribe)
-router.get('/history', auth, getMyPayments)
+router.get('/', (req, res) => {
+  res.send('💳 Bienvenue sur /api/payments (gestion des paiements)')
+})
+
+//  Paiement : souscription
+router.post('/create', auth, createPayment)
+
+//  Historique des paiements
+router.get('/my', auth, getMyPayments)
 
 export default router

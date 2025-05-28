@@ -5,10 +5,14 @@ import isAdmin from '../middlewares/isAdmin.js'
 
 const router = express.Router()
 
-// Routes protégées
-router.get('/me', auth, getProfile)              
-router.put('/me', auth, updateProfile)           
-router.get('/all', auth, listUsers) 
-router.get('/all', auth, isAdmin, listUsers)             
+
+router.get('/', (req, res) => {
+  res.send('Bienvenue sur /api/users')
+})
+
+//  Routes protégées
+router.get('/me', auth, getProfile)               
+router.put('/me', auth, updateProfile)            
+router.get('/all', auth, isAdmin, listUsers)      
 
 export default router

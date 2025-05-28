@@ -1,11 +1,13 @@
+// controllers/payment.controller.js
 import Payment from '../models/payment.model.js'
 import User from '../models/user.model.js'
 
-export const subscribe = async (req, res) => {
+// ✅ Nom correct : createPayment
+export const createPayment = async (req, res) => {
   const { plan } = req.body
-  const prices = { pro: 10, premium: 20 }
+  const prices = { prenium: 10, entreprise: 20 }
 
-  if (!['pro', 'premium'].includes(plan)) {
+  if (!['prenium', 'entreprise'].includes(plan)) {
     return res.status(400).json({ message: 'Plan invalide' })
   }
 

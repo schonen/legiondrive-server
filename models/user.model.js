@@ -5,11 +5,10 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
 
-  //  Rôle utilisateur
   role: { type: String, enum: ['user', 'admin'], default: 'user' },
 
-  //  Informations d’abonnement
-  plan: { type: String, enum: ['free', 'pro', 'premium'], default: 'free' },
+  
+  plan: { type: String, enum: ['free', 'prenium', 'entreprise'], default: 'free' },
   storageUsed: { type: Number, default: 0 }
 
 }, { timestamps: true })
